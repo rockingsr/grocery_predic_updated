@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home</title>
+</head>
+<body>
+
+
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='image/resources/logo.svg') }}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Predictor">Predictor</a></li>
+                <li><a href="/contact">About Us</a></li>
+            </ul>
+        </nav>
+        <p class="menu cta" style="cursor: pointer;">Menu</p>
+    </header>
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="/">Home</a>
+            <a href="/Predictor">Predictor</a>
+            <a href="/contact">About Us</a>
+        </div>
+    </div>
+
+    <div class="fmid">
+        <div class="holder">
+            <div class="txt">
+                <h1>Hey,</h1>
+                <h1>There</h1>
+            </div>
+            <img src="{{ url_for('static', filename='image/resources/images.png') }}" alt="items"style="height: 21rem; margin-right:7rem"> 
+
+        </div>
+
+        <p>⭐Welcome To The Grocery Predictor!</p>
+        <p>Let's Dive In!⭐</p>
+
+    </div>
+
+
+        <h1 class="dot">...............</h1>
+
+
+    <div class="fmid">
+        <div class="holder">
+            
+            <img src="{{ url_for('static', filename='image/resources/items.png') }}" alt="items"style="height: 21rem; margin-right:7rem"> 
+
+            <div class="txt1">
+                <h1>Fast Precise,</h1>
+                <h1>& Robust</h1>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <h1 class="dot">...............</h1>
+
+    <div class="fmid">
+        <div class="holder">
+            <div class="txt1">
+                <h1>Fusion Of AI/ML</h1>
+                <h1>And Powered By Web</h1>
+            </div>
+            <img src="{{ url_for('static', filename='image/resources/pic3.png') }}" alt="items"style="height: 21rem; margin-right:7rem"> 
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <h1>Made With Love ❤️</h1>
+        <h1>Copyright 2022</h1>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='mobile.js')}}"></script>
+
+    
+</body>
+</html>

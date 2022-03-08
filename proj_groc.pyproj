@@ -1,0 +1,66 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1c441748-adb0-4a10-97f7-96dc1e75b0d5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>proj_groc.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>proj_groc</Name>
+    <RootNamespace>proj_groc</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.py" />
+    <Compile Include="proj_groc.py" />
+    <Compile Include="simulate.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="static\image\" />
+    <Folder Include="static\image\resources\" />
+    <Folder Include="templates\" />
+    <Folder Include="static\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="newdata11.csv" />
+    <Content Include="static\con_style.css" />
+    <Content Include="static\con_styles.css" />
+    <Content Include="static\image\resources\bg.jpg" />
+    <Content Include="static\image\resources\bg_img.jpeg" />
+    <Content Include="static\image\resources\images.png" />
+    <Content Include="static\image\resources\items.png" />
+    <Content Include="static\image\resources\logo.svg" />
+    <Content Include="static\image\resources\moon.png" />
+    <Content Include="static\image\resources\orange.png" />
+    <Content Include="static\image\resources\pic3.png" />
+    <Content Include="static\image\resources\predict.png" />
+    <Content Include="static\image\resources\sun.png" />
+    <Content Include="static\item.txt" />
+    <Content Include="static\mobile.js" />
+    <Content Include="static\predic_styles.css" />
+    <Content Include="static\script.js" />
+    <Content Include="static\styles.css" />
+    <Content Include="templates\contact.html" />
+    <Content Include="templates\index.html" />
+    <Content Include="templates\predict.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

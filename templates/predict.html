@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='predic_styles.css') }}">
+    <title>About Us</title>
+</head>
+<body>
+
+
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='image/resources/logo.svg') }}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Predictor">Predictor</a></li>
+                <li><a href="/contact">About Us</a></li>
+                <li><img src="{{ url_for('static', filename='image/resources/moon.png') }}" id="icon" alt="Dar Mode"></li>
+            </ul>
+        </nav>
+        <p class="menu cta" style="cursor: pointer;">Menu</p>
+    </header>
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="/">Home</a>
+            <a href="/Predictor">Predictor</a>
+            <a href="/contact">About Us</a>
+        </div>
+    </div>
+    
+
+    <div class="main">
+        <h1 class="main_head">Welcome To Grocery Predictor</h1>
+        <img src="{{ url_for('static', filename='image/resources/predict.png') }}" alt="predict Image" style="margin-left: 25rem;">
+        <h6 class="dot">...............</h6>
+        <h2>Click On Predict Button To</h2>
+        <h3>Show Result</h3>
+
+        <form action="{{ url_for('Predictor') }}" method="post">
+
+            <input type="text" placeholder="Enter Keywords" name="item" id="item">
+
+            <button type="submit" class="cybr-btn">Predict</button>
+
+            <a href="{{ url_for('static', filename='item.txt') }}" download="GFG">
+                <button type="button">Click Here For Items !!</button>
+                </a>
+    
+
+        </form>
+
+        <div class="output">
+               <p>{{ msg }}</p>
+       </div>
+    </div>
+
+
+    <div class="footer">
+        <h1>Made With Love ❤️</h1>
+        <h1>Copyright 2022</h1>
+    </div>
+
+    <script>
+        var icon = document.getElementById("icon");
+    
+        if (localStorage.getItem("theme") == null) {
+          localStorage.setItem("theme", "light");
+        }
+    
+        let localData = localStorage.getItem("theme");
+        if (localData == "light") {
+          icon.src = "static/image/resources/moon.png";
+          document.body.classList.remove("dark-theme");
+        } else if (localData == "dark") {
+            icon.src = "static/image/resources/sun.png ";
+          document.body.classList.add("dark-theme");
+        }
+    
+        icon.onclick = function () {
+          document.body.classList.toggle("dark-theme");
+          if (document.body.classList.contains("dark-theme")) {
+            icon.src = "static/image/resources/sun.png";
+            localStorage.setItem("theme", "dark");
+          } else {
+              icon.src = "static/image/resources/moon.png";
+            localStorage.setItem("theme", "light");
+          }
+        }
+      </script>
+
+
+
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='mobile.js') }}"></script>
+
+    
+</body>
+</html>

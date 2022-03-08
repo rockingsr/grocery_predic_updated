@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/97fe9846b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='con_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='con_styles.css') }}">
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='image/resources/logo.svg') }}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/Predictor">Predictor</a></li>
+                <li><a href="/contact">About Us</a></li>
+            </ul>
+        </nav>
+        <p class="menu cta" style="cursor: pointer;">Menu</p>
+    </header>
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="/">Home</a>
+            <a href="/Predictor">Predictor</a>
+            <a href="/contact">About Us</a>
+        </div>
+    </div>
+
+
+
+    <section>
+        <h1>Contact Us</h1>
+        <p>Any question or remarks? Just write us a message!</p>
+        <div class="container">
+            <div class="row_left_side">
+                <div class="semi_circle"></div>
+                <div class="circle"></div>
+                <h2>Contact Information</h2>
+                <p>Fill up the form and our Team will get back to you within 24 hours.</p>
+                <a href="tel:+012345678910"><i class="fas fa-phone-alt"><span>+0123 4567 8910</span></i></a>
+                <a href="mailto:hello@flowbase.com"><i class="far fa-envelope"><span>hello@flowbase.com</span></i></a>
+                <a href=""><i class="fas fa-map-marker-alt"><span>102 Street 2714 Don</span></i></a>
+                <div class="social_icon">
+                    <a href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/"><i class="fab fa-instagram"></i></a>
+                    <a href="/"><i class="fab fa-twitter"></i></a>
+                    <a href="/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+            </div>
+            <div class="row_right_side">
+                <form action="/" autocomplete="off">
+                    <label for="fname">First Name<br /><input type="text" name="fname" id="fname"
+                            placeholder="Sohit"/></label>
+                    <label for="lname">Last Name<br /><input type="text" name="lname" id="lname"
+                            placeholder="Mishra"/></label>
+                    <label for="mail">Mail<br /><input type="email" name="email" id="email"
+                            placeholder="abc123@gmail.com" /></label>
+                    <label for="phone">Phone<br /><input type="tel" name="tel" id="tel" onkeypress="telspace()" maxlength="16"
+                            placeholder="+91 785 564 5612" /></label>
+                    <div class="checkbox_box">
+                        <h5>What the of website do you need?</h5>
+                        <label for="web_design" class="box">Web Design<input type="checkbox" name="web_design"
+                                id="web_design"><span class="checkmark"></span></label>
+                        <label for="web_development" class="box">Web Development<input type="checkbox"
+                                name="web_development" id="web_development"><span class="checkmark"></span></label>
+                        <label for="logo_design" class="box">Logo Design<input type="checkbox" name="logo_design"
+                                id="logo_design"><span class="checkmark"></span></label>
+                        <label for="other" class="box">Other<input type="checkbox" name="other" id="other"><span
+                                class="checkmark"></span></label>
+
+                    </div>
+                    <label for="message">Message</label><br />
+                    <textarea name="message" id="message" placeholder="Write your Message"></textarea>
+                    <button onclick="send()">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+    <script src="{{ url_for('static', filename='mobile.js')}}"></script>
+</body>
+
+</html>
