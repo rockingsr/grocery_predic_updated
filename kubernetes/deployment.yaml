@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: project_grocery
+  name: project_grocery
+  namespace: kube_groc_proj
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project_grocery
+  template:
+    metadata:
+      labels:
+        app: project_grocery
+    spec:
+      containers:
+        - image: rockingsr/grocery_prediction:latest
+          name: grocery_prediction
+          ports:
+            - containerPort: 5000
